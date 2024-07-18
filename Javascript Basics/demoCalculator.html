@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculation Using Javascript</h1>
+    <div style="margin: 25px">
+      <label for="num1">Enter Number 1</label>
+      <input type="text" id="num1" />
+    </div>
+    <div style="margin: 25px">
+      <label for="num1">Enter Number 2</label>
+      <input type="text" id="num2" />
+    </div>
+    <button onclick="AddNumber()" style="margin: 25px">Addition</button>
+    <button onclick="SubNumber()" style="margin: 25px">Subtraction</button>
+    <button onclick="MulNumber()" style="margin: 25px">Multiplication</button>
+    <button onclick="DivNumber()" style="margin: 25px">Division</button>
+    <div style="margin: 25px">
+      <label for="ans">Answer</label>
+      <input type="text" id="ans" />
+    </div>
+    <script>
+      function Hello() {
+        console.log('Kem che Mitra');
+      }
+      for (let i = 0; i < 5; i++) {
+        Hello();
+        console.log(i);
+      }
+      function AddNumber() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        const answer = num1 + num2;
+        console.log(answer);
+        document.getElementById('ans').value = answer;
+      }
+      function add() {
+        return 10 + 20;
+      }
+      console.log(add());
+
+      function SubNumber() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        const answer = num1 - num2;
+        console.log(answer);
+        document.getElementById('ans').value = answer;
+      }
+
+      function MulNumber() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        const answer = num1 * num2;
+        console.log(answer);
+        document.getElementById('ans').value = answer;
+      }
+
+      function DivNumber() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        const answer = num1 / num2;
+        console.log(answer);
+        document.getElementById('ans').value = answer;
+      }
+    </script>
+  </body>
+</html>
