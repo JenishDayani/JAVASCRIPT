@@ -136,9 +136,6 @@ console.log(
 
 console.log(`Split the String and make a Array :- ${strName.split(' ')}`);
 
-
-
-
 // String Search
 
 console.log(
@@ -178,6 +175,47 @@ console.log(
 );
 
 const example = strName.matchAll('Dayani');
-const data =  Array.from(example)
+const data = Array.from(example);
 console.log(
-  "Match all Function return the Object  of the all occurrence :- ",data)
+  'Match all Function return the Object  of the all occurrence :- ',
+  data
+);
+
+console.log(
+  `Includes function return true if the string contains the specify value :- ${strName.includes(
+    'Jenish'
+  )}`
+);
+
+console.log(
+  `Includes function with parameter return true if the string contains the specify value after the given position :- ${strName.includes(
+    'Jenish',
+    20
+  )}`
+);
+
+console.log(
+  `Starts with Function return true if the string start with specify value :- ${strName.startsWith(
+    'Dayani'
+  )}`
+);
+
+console.log(
+  `Starts with Function with parameter return true if the string start with specify value at specify position:- ${strName.startsWith(
+    'Dayani',
+    7
+  )}`
+);
+
+console.log(
+  `Ends with Function return true if the string end with specify value :- ${strName.endsWith(
+    2411
+  )}`
+);
+
+console.log(
+  `Ends with Function with parameter return true if the string end with specify value at specify position:- ${strName.endsWith(
+    'Dayani',
+    13
+  )}`
+);
