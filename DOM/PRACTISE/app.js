@@ -1,3 +1,21 @@
+window.addEventListener('DOMContentLoaded', function () {
+  console.log('Hey the Document is Fully Loaded Successfully');
+});
+
+window.addEventListener('DOMContentLoaded', function () {
+  console.log('DOMContentLoaded I have Loaded First');
+  const img = this.document.querySelector('img');
+  console.log(img);
+  console.log(img.width);
+});
+
+window.addEventListener('load', function () {
+  console.log('Load I have Loaded Second');
+  const img = this.document.querySelector('img');
+  console.log(img);
+  console.log(img.width);
+});
+
 console.log(document);
 console.dir(document);
 
@@ -321,7 +339,7 @@ divTagBubble.addEventListener('click', function (event) {
 const form = document.createElement('form');
 form.setAttribute('id', 'form');
 form.innerHTML = `
-    <input type="text" placeholder="Enter Your Name" id="name">
+    <input type="text" placeholder="Enter Your Name" autocomplete='no' id="name">
     <input type="password"  placeholder="Enter Your Password" id="password">
     <input type="submit" id="submit">
 `;
@@ -395,16 +413,31 @@ function sayHello() {
   console.log('Hello My name is Jenish');
 }
 
-function showScore(name,score){
+function showScore(name, score) {
   console.log(`Hello i am ${name} and My score is ${score}`);
 }
 
 sayHello();
-setTimeout(sayHello,10000)
-setTimeout(function(){
+setTimeout(sayHello, 10000);
+setTimeout(function () {
   console.log('My Surname is Dayani');
-},3000)
-showScore('Vaibhav',20)
-setTimeout(showScore,6000,'Jenish',99)
+}, 3000);
+showScore('Vaibhav', 20);
+setTimeout(showScore, 6000, 'Jenish', 99);
 
-setInterval(showScore,0,'Het',50)
+setInterval(showScore, 0, 'Het', 50);
+
+window.addEventListener('scroll', function () {
+  console.log('You are scrolling the page');
+  console.log(`Horizontal :-  ${this.window.scrollX}px`);
+  console.log(`Vertical :-  ${this.window.scrollY}px`);
+});
+
+console.log(`Height of the Page :- ${window.innerHeight}`);
+console.log(`Width of the Page :- ${window.innerWidth}`);
+
+console.log(divTag2.getBoundingClientRect());
+
+window.addEventListener('resize',function(){
+  console.log(`Width of the Page :- ${window.innerWidth}`);
+})
