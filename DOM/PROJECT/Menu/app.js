@@ -125,7 +125,6 @@ function displayMenuBtn() {
   filterBtn.forEach(function (btn) {
     btn.addEventListener('click', function (event) {
       const category = event.currentTarget.dataset.id;
-
       const menuCategory = menu.filter(function (item) {
         if (item.category === category) {
           return item;
